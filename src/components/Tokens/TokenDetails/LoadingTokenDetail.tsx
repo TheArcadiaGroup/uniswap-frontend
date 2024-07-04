@@ -3,8 +3,8 @@ import styled, { useTheme } from 'styled-components/macro'
 import { LoadingBubble } from '../loading'
 import { DeltaContainer, TokenPrice } from './PriceChart'
 import {
+  AboutContainer,
   AboutHeader,
-  AboutSection,
   BreadcrumbNavLink,
   ChartContainer,
   ChartHeader,
@@ -76,7 +76,7 @@ const Space = styled.div<{ heightSize: number }>`
   height: ${({ heightSize }) => `${heightSize}px`};
 `
 
-function Wave() {
+export function Wave() {
   const theme = useTheme()
   return (
     <svg width="416" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -118,7 +118,7 @@ export default function LoadingTokenDetail() {
         </LoadingChartContainer>
         <Space heightSize={32} />
       </ChartHeader>
-      <AboutSection>
+      <AboutContainer>
         <AboutHeader>
           <SquareLoadingBubble />
         </AboutHeader>
@@ -127,7 +127,7 @@ export default function LoadingTokenDetail() {
         <HalfLoadingBubble />
 
         <ResourcesContainer>{null}</ResourcesContainer>
-      </AboutSection>
+      </AboutContainer>
       <StatsSection>
         <StatsLoadingContainer>
           <StatPair>

@@ -20,14 +20,6 @@ export const column = sprinkles({
   alignItems: 'center',
 })
 
-export const section = style([
-  sprinkles({
-    paddingLeft: { mobile: '16', desktopL: '0' },
-    paddingRight: { mobile: '16', desktopL: '0' },
-  }),
-  { maxWidth: '1000px', margin: '0 auto' },
-])
-
 // TYPOGRAPHY
 export const header1 = sprinkles({ fontWeight: 'normal', fontSize: '36' })
 export const header2 = sprinkles({ fontWeight: 'normal', fontSize: '28' })
@@ -117,3 +109,40 @@ export const buttonSmall = style([
 export const imageHover = style({
   transform: 'scale(1.25)',
 })
+
+export const magicalGradient = style({
+  selectors: {
+    '&::before': {
+      content: '',
+      position: 'absolute',
+      inset: 0,
+      background: 'linear-gradient(91.46deg, #4673FA 0%, #9646FA 100.13%) border-box',
+      borderColor: 'transparent',
+      WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);',
+      WebkitMaskComposite: 'xor;',
+      maskComposite: 'exclude',
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      borderRadius: 'inherit',
+      pointerEvents: 'none',
+    },
+  },
+})
+
+export const magicalGradientOnHover = style([
+  magicalGradient,
+  {
+    selectors: {
+      '&::before': {
+        opacity: '0',
+        WebkitTransition: 'opacity 0.25s ease',
+        MozTransition: 'opacity 0.25s ease',
+        msTransition: 'opacity 0.25s ease',
+        transition: 'opacity 0.25s ease-out',
+      },
+      '&:hover::before': {
+        opacity: '1',
+      },
+    },
+  },
+])

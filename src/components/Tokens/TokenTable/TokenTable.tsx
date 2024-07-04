@@ -7,7 +7,7 @@ import {
   sortDirectionAtom,
 } from 'components/Tokens/state'
 import { useAllTokens } from 'hooks/Tokens'
-import { TimePeriod, TokenData } from 'hooks/useExplorePageQuery'
+import { TimePeriod, TokenData, UseTopTokensResult } from 'hooks/useExplorePageQuery'
 import { useAtomValue } from 'jotai/utils'
 import { ReactNode, useCallback, useMemo } from 'react'
 import { AlertTriangle } from 'react-feather'
@@ -44,7 +44,6 @@ const NoTokenDisplay = styled.div`
   gap: 8px;
 `
 const TokenRowsContainer = styled.div`
-  padding: 4px 0px;
   width: 100%;
 `
 
@@ -75,7 +74,7 @@ function useFilteredTokens(addresses: string[]) {
   )
 }
 
-function useSortedTokens(addresses: string[], tokenData: TokenData | null) {
+function useSortedTokens(addresses: string[], tokenData: Record<string, TokenData> | null) {
   const sortCategory = useAtomValue(sortCategoryAtom)
   const sortDirection = useAtomValue(sortDirectionAtom)
   const timePeriod = useAtomValue<TimePeriod>(filterTimeAtom)
@@ -98,6 +97,7 @@ function useSortedTokens(addresses: string[], tokenData: TokenData | null) {
         if (!tokenData) {
           return 0
         }
+        // fix any, delta property
         const token1 = tokenData[token1Address] as any
         const token2 = tokenData[token2Address] as any
 
@@ -152,13 +152,7 @@ function LoadingTokenTable() {
   )
 }
 
-interface TokenTableProps {
-  data: TokenData | null
-  error: string | null
-  loading: boolean
-}
-
-export default function TokenTable({ data, error, loading }: TokenTableProps) {
+export default function TokenTable({ data, error, loading }: UseTopTokensResult) {
   const showFavorites = useAtomValue<boolean>(showFavoritesAtom)
   const timePeriod = useAtomValue<TimePeriod>(filterTimeAtom)
   const topTokenAddresses = data ? Object.keys(data) : []
@@ -199,7 +193,7 @@ export default function TokenTable({ data, error, loading }: TokenTableProps) {
             tokenAddress={tokenAddress}
             tokenListIndex={index}
             tokenListLength={filteredAndSortedTokens.length}
-            data={data}
+            tokenData={data[tokenAddress]}
             timePeriod={timePeriod}
           />
         ))}

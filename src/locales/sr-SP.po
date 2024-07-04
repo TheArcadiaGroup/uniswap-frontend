@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: uniswap-interface\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-08-17 20:04\n"
+"PO-Revision-Date: 2022-08-23 20:04\n"
 "Last-Translator: \n"
 "Language: sr_SP\n"
 "Language-Team: Serbian (Cyrillic)\n"
@@ -138,6 +138,7 @@ msgstr "Рачун"
 msgid "Active"
 msgstr "Активно"
 
+#: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/PositionCard/index.tsx
 #: src/pages/AddLiquidity/index.tsx
 msgid "Add"
@@ -169,6 +170,7 @@ msgid "Add more liquidity"
 msgstr "Додајте више ликвидности"
 
 #: src/components/TransactionConfirmationModal/index.tsx
+#: src/components/TransactionConfirmationModal/index.tsx
 msgid "Add {0}"
 msgstr "Додајте {0}"
 
@@ -180,9 +182,18 @@ msgstr "Додајте {0}-{1} ликвидност"
 msgid "Add {0}/{1} V3 liquidity"
 msgstr "Додај {0}/{1} В3 ликвидност"
 
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "Added"
+msgstr "Додато"
+
+#: src/components/TransactionConfirmationModal/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx
 msgid "Added {0}"
 msgstr "Додато {0}"
+
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "Adding"
+msgstr "Додавање"
 
 #: src/components/vote/QueueModal.tsx
 msgid "Adding this proposal to the queue will allow it to be executed, after a delay."
@@ -290,6 +301,7 @@ msgid "Available to deposit: {0}"
 msgstr "Доступно за депозит: {0}"
 
 #: src/components/WalletModal/PendingView.tsx
+#: src/components/WalletModal/PendingView.tsx
 msgid "Back to wallet selection"
 msgstr "Назад на избор новчаника"
 
@@ -342,6 +354,7 @@ msgid "By adding this list you are implicitly trusting that the data is correct.
 msgstr "Додавањем ове листе имплицитно сте сагласни да су подаци тачни. Свако може да креира листу, укључујући стварање лажних верзија постојећих листа и листа за које се тврди да представљају пројекте којих нема."
 
 #: src/components/WalletModal/index.tsx
+#: src/components/WalletModal/index.tsx
 msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the Uniswap <1>Protocol Disclaimer</1>."
 msgstr "Povezivanjem novčanika prihvatate Uslove korišćenja usluge <0></0> i potvrđujete da ste pročitali i razumeli Odricanje odgovornosti</1><1>."
 
@@ -369,6 +382,7 @@ msgstr "Проверите статус мреже"
 msgid "Check out our v3 LP walkthrough and migration guides."
 msgstr "Погледајте наше водиче за v3 LP и водиче за миграцију."
 
+#: src/components/WalletDropdown/AuthenticatedHeader.tsx
 #: src/components/earn/ClaimRewardModal.tsx
 #: src/components/earn/ClaimRewardModal.tsx
 #: src/pages/Earn/Manage.tsx
@@ -441,6 +455,7 @@ msgstr "Обриши све"
 #: src/components/TokenSafety/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx
+#: src/components/TransactionConfirmationModal/index.tsx
 msgid "Close"
 msgstr "Затвори"
 
@@ -495,7 +510,12 @@ msgstr "Потврдите снабдевање"
 msgid "Confirm Swap"
 msgstr "Потврдите размену"
 
+#: src/components/WalletModal/PendingView.tsx
+msgid "Confirm this connection in your wallet"
+msgstr "Потврдите ову везу у свом новчанику"
+
 #: src/components/ModalViews/index.tsx
+#: src/components/TransactionConfirmationModal/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/components/claim/AddressClaimModal.tsx
 #: src/components/claim/ClaimModal.tsx
@@ -550,13 +570,22 @@ msgstr "Повезан са"
 msgid "Connecting..."
 msgstr "Повезивање..."
 
+#: src/components/WalletDropdown/AuthenticatedHeader.tsx
 #: src/theme/components.tsx
 msgid "Copied!"
 msgstr "Копирано!"
 
+#: src/components/WalletDropdown/AuthenticatedHeader.tsx
+msgid "Copy"
+msgstr "Копирај"
+
 #: src/components/AccountDetails/index.tsx
 msgid "Copy Address"
 msgstr "Копирај адресу"
+
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "Create"
+msgstr "Креирај"
 
 #: src/pages/AddLiquidityV2/ConfirmAddModalBottom.tsx
 msgid "Create Pool & Supply"
@@ -592,6 +621,14 @@ msgstr "Направите фонд."
 msgid "Create {0}/{1} V3 pool"
 msgstr "Створити {0}/{1} В3 базен"
 
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "Created"
+msgstr "Цреатед"
+
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "Creating"
+msgstr "Креирање"
+
 #: src/components/PositionPreview/index.tsx
 #: src/pages/Pool/PositionPage.tsx
 msgid "Current price"
@@ -603,6 +640,10 @@ msgstr "Тренутна {0} цена:"
 
 #: src/components/Menu/index.tsx
 msgid "Dark Theme"
+msgstr "Мрачна тема"
+
+#: src/components/WalletDropdown/DefaultMenu.tsx
+msgid "Dark theme"
 msgstr "Мрачна тема"
 
 #: src/pages/Vote/styled.tsx
@@ -677,6 +718,7 @@ msgid "Details"
 msgstr "Детаљи"
 
 #: src/components/AccountDetails/index.tsx
+#: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Disconnect"
 msgstr "Прекини везу"
 
@@ -684,6 +726,7 @@ msgstr "Прекини везу"
 msgid "Discord"
 msgstr "Discord"
 
+#: src/components/TransactionConfirmationModal/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx
 msgid "Dismiss"
 msgstr "Одбаци"
@@ -749,10 +792,12 @@ msgstr "Унесите {0} износ"
 
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx
+#: src/components/TransactionConfirmationModal/index.tsx
 #: src/components/Web3Status/index.tsx
 msgid "Error"
 msgstr "Грешка"
 
+#: src/components/WalletModal/PendingView.tsx
 #: src/components/WalletModal/PendingView.tsx
 msgid "Error connecting"
 msgstr "Грешка при повезивању"
@@ -822,6 +867,14 @@ msgstr "Експертни режим искључује упит за потв�
 msgid "Expired"
 msgstr "Истекло"
 
+#: src/components/WalletDropdown/AuthenticatedHeader.tsx
+msgid "Explore"
+msgstr "Истражите"
+
+#: src/pages/Tokens/index.tsx
+msgid "Explore Tokens"
+msgstr "Истражите токене"
+
 #: src/pages/Pool/CTACards.tsx
 msgid "Explore Uniswap Analytics."
 msgstr "Истражите Унисвап Аналитицс."
@@ -876,6 +929,7 @@ msgid "Help Center"
 msgstr "Центар за помоћ"
 
 #: src/components/FeeSelector/index.tsx
+#: src/components/Tokens/TokenDetails/TokenDetail.tsx
 msgid "Hide"
 msgstr "Сакрити"
 
@@ -883,11 +937,8 @@ msgstr "Сакрити"
 msgid "High Price Impact"
 msgstr "Утицај високе цене"
 
-#: src/components/TokenSafety/index.tsx
-msgid "I Understand"
-msgstr "Разумем"
-
 #: src/components/SearchModal/ImportList.tsx
+#: src/components/TokenSafety/index.tsx
 #: src/pages/AddLiquidity/index.tsx
 msgid "I understand"
 msgstr "разумем"
@@ -986,16 +1037,14 @@ msgid "Invalid recipient"
 msgstr "Неважећи прималац"
 
 #: src/components/Menu/index.tsx
+#: src/components/WalletDropdown/DefaultMenu.tsx
+#: src/components/WalletDropdown/LanguageMenu.tsx
 msgid "Language"
 msgstr "Језик"
 
 #: src/pages/Pool/index.tsx
 msgid "Learn"
 msgstr "Научи"
-
-#: src/components/TokenSafety/index.tsx
-msgid "Learn More"
-msgstr "Сазнајте више"
 
 #: src/pages/Pool/CTACards.tsx
 msgid "Learn about providing liquidity"
@@ -1004,6 +1053,7 @@ msgstr "Сазнајте више о обезбеђивању ликвиднос
 #: src/components/PrivacyPolicy/index.tsx
 #: src/components/PrivacyPolicy/index.tsx
 #: src/components/TokenSafety/TokenSafetyMessage.tsx
+#: src/components/TokenSafety/index.tsx
 msgid "Learn more"
 msgstr "Сазнајте више"
 
@@ -1015,6 +1065,10 @@ msgstr "Pravo i privatnost"
 #: src/components/Menu/index.tsx
 msgid "Light Theme"
 msgstr "Лигхт Тхеме"
+
+#: src/components/WalletDropdown/DefaultMenu.tsx
+msgid "Light theme"
+msgstr "Светла тема"
 
 #: src/components/claim/ClaimModal.tsx
 #: src/pages/Pool/PositionPage.tsx
@@ -1152,6 +1206,10 @@ msgstr "Недостају зависности"
 msgid "More"
 msgstr "Више"
 
+#: src/components/Tokens/TokenDetails/TokenDetail.tsx
+msgid "Name not found"
+msgstr "Име није пронађено"
+
 #: src/components/swap/AdvancedSwapDetails.tsx
 msgid "Network Fee"
 msgstr "Мрежна накнада"
@@ -1200,6 +1258,14 @@ msgstr "Није пронађен ниједан предлог."
 #: src/components/SearchModal/CurrencySearch.tsx
 msgid "No results found."
 msgstr "Нема резултата."
+
+#: src/components/Tokens/TokenDetails/TokenDetail.tsx
+msgid "No stats available"
+msgstr "Нема доступне статистике"
+
+#: src/components/Tokens/TokenDetails/TokenDetail.tsx
+msgid "No token information available"
+msgstr "Нема доступних информација о токену"
 
 #: src/constants/tokenSafety.tsx
 msgid "Not Available"
@@ -1258,6 +1324,7 @@ msgstr "Власник"
 msgid "Participating pools"
 msgstr "Фондови који учествују"
 
+#: src/components/WalletDropdown/DefaultMenu.tsx
 #: src/pages/Vote/styled.tsx
 msgid "Pending"
 msgstr "нерешен"
@@ -1286,6 +1353,7 @@ msgstr "Полигон Бридге"
 msgid "Polygonscan"
 msgstr "Полигонсцан"
 
+#: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/Header/index.tsx
 msgid "Pool"
 msgstr "Фонд"
@@ -1320,8 +1388,8 @@ msgstr "Сакупљено {0}:"
 
 #: src/pages/Pool/index.tsx
 #: src/pages/Pool/index.tsx
-msgid "Pools Overview"
-msgstr "Преглед фондова"
+msgid "Pools"
+msgstr "Базени"
 
 #: src/components/Header/NetworkSelector.tsx
 msgid "Portal Bridge"
@@ -1424,6 +1492,10 @@ msgstr "Стати у ред"
 msgid "Rates"
 msgstr "Стопе"
 
+#: src/components/Tokens/TokenDetails/TokenDetail.tsx
+msgid "Read more"
+msgstr "Опширније"
+
 #: src/pages/Earn/index.tsx
 msgid "Read more about UNI"
 msgstr "Прочитајте више о UNI-ју"
@@ -1448,6 +1520,7 @@ msgstr "Недавне трансакције"
 msgid "Recipient"
 msgstr "Прималац"
 
+#: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/PositionCard/V2.tsx
 #: src/components/PositionCard/index.tsx
 #: src/pages/RemoveLiquidity/V3.tsx
@@ -1478,6 +1551,14 @@ msgstr "Уклони ликвидност"
 msgid "Remove list"
 msgstr "Уклони листу"
 
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "Removed"
+msgstr "Уклоњено"
+
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "Removing"
+msgstr "Уклањање"
+
 #: src/pages/RemoveLiquidity/V3.tsx
 msgid "Removing {0} {1} and {2} {3}"
 msgstr "Уклањање {0} {1} и {2} {3}"
@@ -1490,6 +1571,7 @@ msgstr "Уклањање {0} {1} и{2} {3}"
 msgid "Request Features"
 msgstr "Рекуест Феатурес"
 
+#: src/components/TransactionConfirmationModal/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/pages/CreateProposal/ProposalSubmissionModal.tsx
@@ -1615,6 +1697,7 @@ msgstr "Снабдевање"
 msgid "Supplying {0} {1} and {2} {3}"
 msgstr "Снабдевање {0} {1} и {2} {3}"
 
+#: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/Header/index.tsx
 #: src/components/swap/SwapHeader.tsx
 #: src/pages/Swap/index.tsx
@@ -1641,9 +1724,21 @@ msgstr "Замените тачно <0/> за <1/>"
 msgid "Swap failed: {0}"
 msgstr "Замена није успела: {0}"
 
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "Swapped"
+msgstr "Замењено"
+
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "Swapping"
+msgstr "Замена"
+
 #: src/components/swap/ConfirmSwapModal.tsx
 msgid "Swapping {0} {1} for {2} {3}"
 msgstr "Замена {0} {1} за {2} {3}"
+
+#: src/components/Tokens/TokenDetails/TokenDetail.tsx
+msgid "Symbol not found"
+msgstr "Симбол није пронађен"
 
 #: src/components/Popups/SurveyPopup.tsx
 msgid "Take a 10 minute survey to help us improve your experience in the Uniswap app."
@@ -1689,6 +1784,7 @@ msgstr "Aplikacija beleži anonimnu statistiku korišćenja kako bi se vremenom 
 msgid "The app securely collects your wallet address and shares it with TRM Labs Inc. for risk and compliance reasons."
 msgstr "Aplikacija bezbedno prikuplja adresu vašeg novčanika i deli je sa TRM Labs Inc. iz razloga rizika i usklađenosti."
 
+#: src/components/WalletModal/PendingView.tsx
 #: src/components/WalletModal/PendingView.tsx
 msgid "The connection attempt failed. Please click try again and follow the steps to connect in your wallet."
 msgstr "Покушај повезивања није успео. Кликните на дугме Пробај поново и пратите кораке за повезивање у новчанику."
@@ -1873,13 +1969,23 @@ msgstr "Крајњи рок за трансакцију"
 
 #: src/lib/hooks/swap/useSendSwapTransaction.tsx
 #: src/lib/hooks/swap/useSendSwapTransaction.tsx
-msgid "Transaction rejected."
-msgstr "Трансакција је одбијена."
+msgid "Transaction rejected"
+msgstr "Трансакција је одбијена"
+
+#: src/components/TransactionConfirmationModal/index.tsx
+msgid "Transaction submitted"
+msgstr "Трансакција је послата"
+
+#: src/components/WalletDropdown/DefaultMenu.tsx
+#: src/components/WalletDropdown/TransactionMenu.tsx
+msgid "Transactions"
+msgstr "Трансакције"
 
 #: src/pages/CreateProposal/ProposalActionSelector.tsx
 msgid "Transfer Token"
 msgstr "Токен за пренос"
 
+#: src/components/WalletModal/PendingView.tsx
 #: src/components/WalletModal/PendingView.tsx
 msgid "Try Again"
 msgstr "Покушајте поново"
@@ -2033,6 +2139,7 @@ msgstr "Погледајте обрачунате накнаде и аналит
 msgid "View list"
 msgstr "Погледајте листу"
 
+#: src/components/TransactionConfirmationModal/index.tsx
 #: src/pages/CreateProposal/ProposalSubmissionModal.tsx
 msgid "View on Etherscan"
 msgstr "Поглед на Етхерсцан-у"
@@ -2118,6 +2225,14 @@ msgstr "Гласање почиње отприлике {0}"
 #: src/components/TransactionConfirmationModal/index.tsx
 msgid "Waiting For Confirmation"
 msgstr "Чека се потврда"
+
+#: src/components/TransactionConfirmationModal/index.tsx
+msgid "Waiting for confirmation"
+msgstr "Чека се потврда"
+
+#: src/components/WalletModal/PendingView.tsx
+msgid "Waiting to connect"
+msgstr "Чека се повезивање"
 
 #: src/components/AddressInputPanel/index.tsx
 msgid "Wallet Address or ENS name"
@@ -2328,6 +2443,10 @@ msgstr "Ваша трансакција ће се вратити ако је н�
 msgid "Your transaction will revert if the price changes unfavorably by more than this percentage."
 msgstr "Ваша трансакција ће се вратити ако се цена неповољно промени за више од овог процента."
 
+#: src/components/WalletDropdown/TransactionMenu.tsx
+msgid "Your transactions will appear here"
+msgstr "Ваше трансакције ће се појавити овде"
+
 #: src/components/AccountDetails/index.tsx
 msgid "Your transactions will appear here..."
 msgstr "Ваше трансакције ће се појавити овде ..."
@@ -2340,6 +2459,11 @@ msgstr "Ваш непотраживани UNI"
 msgid "after slippage"
 msgstr "после клизања"
 
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "and"
+msgstr "и"
+
 #: src/components/ConnectedAccountBlocked/index.tsx
 msgid "blocked activities"
 msgstr "блокиране активности"
@@ -2347,6 +2471,14 @@ msgstr "блокиране активности"
 #: src/components/Settings/index.tsx
 msgid "confirm"
 msgstr "потврди"
+
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "failed"
+msgstr "није успео"
+
+#: src/components/AccountDetailsV2/TransactionBody.tsx
+msgid "for"
+msgstr "за"
 
 #: src/components/claim/AddressClaimModal.tsx
 msgid "for {0}"
@@ -2372,6 +2504,10 @@ msgstr "https:// или ipfs:// или ENS име"
 msgid "minutes"
 msgstr "минута"
 
+#: src/components/WalletDropdown/AuthenticatedHeader.tsx
+msgid "reward"
+msgstr "награда"
+
 #: src/components/SearchModal/ImportRow.tsx
 msgid "via {0}"
 msgstr "преко {0}"
@@ -2395,6 +2531,7 @@ msgstr "{0, plural, =1 {Не можете трговати овим токено
 #: src/components/RateToggle/index.tsx
 #: src/components/RateToggle/index.tsx
 #: src/components/Settings/index.tsx
+#: src/components/Tokens/TokenDetails/TokenDetail.tsx
 msgid "{0}"
 msgstr "{0}"
 
@@ -2549,6 +2686,6 @@ msgid "{tokenB} per {tokenA}"
 msgstr "{tokenB} по {tokenA}"
 
 #: src/pages/Pool/PositionPage.tsx
-msgid "← Back to Pools Overview"
-msgstr "← Повратак на Преглед фондова"
+msgid "← Back to Pools"
+msgstr "← Назад на Базени"
 

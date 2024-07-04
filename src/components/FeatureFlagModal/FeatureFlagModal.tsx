@@ -1,9 +1,10 @@
 import { FeatureFlag, featureFlagSettings, useUpdateFlag } from 'featureFlags'
 import { NavBarVariant, useNavBarFlag } from 'featureFlags/flags/navBar'
-import { Phase1Variant, usePhase1Flag } from 'featureFlags/flags/phase1'
+import { NftVariant, useNftFlag } from 'featureFlags/flags/nft'
 import { RedesignVariant, useRedesignFlag } from 'featureFlags/flags/redesign'
 import { TokensVariant, useTokensFlag } from 'featureFlags/flags/tokens'
 import { TokenSafetyVariant, useTokenSafetyFlag } from 'featureFlags/flags/tokenSafety'
+import { TokensNetworkFilterVariant, useTokensNetworkFilterFlag } from 'featureFlags/flags/tokensNetworkFilter'
 import { useAtomValue } from 'jotai/utils'
 import { ReactNode, useState } from 'react'
 import { X } from 'react-feather'
@@ -165,10 +166,10 @@ export default function FeatureFlagModal() {
       </Header>
       <FlagGroupName>Phase 1</FlagGroupName>
       <FeatureFlagOption
-        variants={Object.values(Phase1Variant)}
-        value={usePhase1Flag()}
-        featureFlag={FeatureFlag.phase1}
-        label="All Phase 1 changes (nft features)."
+        variants={Object.values(NftVariant)}
+        value={useNftFlag()}
+        featureFlag={FeatureFlag.nft}
+        label="NFTs"
       />
       <FlagGroupName>Phase 0</FlagGroupName>
       <FeatureFlagOption
@@ -188,6 +189,12 @@ export default function FeatureFlagModal() {
         value={useTokensFlag()}
         featureFlag={FeatureFlag.tokens}
         label="Tokens"
+      />
+      <FeatureFlagOption
+        variants={Object.values(TokensNetworkFilterVariant)}
+        value={useTokensNetworkFilterFlag()}
+        featureFlag={FeatureFlag.tokensNetworkFilter}
+        label="Tokens Network Filter"
       />
       <FeatureFlagOption
         variants={Object.values(TokenSafetyVariant)}

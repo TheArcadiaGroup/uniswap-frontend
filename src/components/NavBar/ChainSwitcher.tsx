@@ -29,7 +29,7 @@ const ChainRow = ({
   return (
     <Row
       as="button"
-      background={active ? 'lightGrayContainer' : 'none'}
+      background={active ? 'lightGrayOverlay' : 'none'}
       className={`${styles.ChainSwitcherRow} ${subhead}`}
       onClick={() => onSelectChain(targetChain)}
     >
@@ -57,7 +57,7 @@ interface ChainSwitcherProps {
 }
 
 export const ChainSwitcher = ({ isMobile }: ChainSwitcherProps) => {
-  const { chainId, connector } = useWeb3React()
+  const { chainId } = useWeb3React()
   const [isOpen, toggleOpen] = useReducer((s) => !s, false)
 
   const ref = useRef<HTMLDivElement>(null)
@@ -76,20 +76,20 @@ export const ChainSwitcher = ({ isMobile }: ChainSwitcherProps) => {
     <Box position="relative" ref={ref}>
       <Row as="button" gap="8" className={styles.ChainSwitcher} onClick={toggleOpen}>
         <img src={info.logoUrl} alt={info.label} className={styles.Image} />
-        <Box as="span" className={subhead} color="explicitWhite" style={{ lineHeight: '20px' }}>
+        <Box as="span" className={subhead} style={{ lineHeight: '20px' }}>
           {info.label}
         </Box>
         {isOpen ? (
-          <NewChevronUpIcon width={16} height={16} color="darkGray" />
+          <NewChevronUpIcon width={16} height={16} color="blackBlue" />
         ) : (
-          <NewChevronDownIcon width={16} height={16} color="darkGray" />
+          <NewChevronDownIcon width={16} height={16} color="blackBlue" />
         )}
       </Row>
       {isOpen && (
         <NavDropdown top={60} leftAligned={isMobile}>
           <Column gap="4">
             {NETWORK_SELECTOR_CHAINS.map((chainId: SupportedChainId) =>
-              isChainAllowed(connector, chainId) ? (
+              isChainAllowed(chainId) ? (
                 <ChainRow
                   onSelectChain={async (targetChainId: SupportedChainId) => {
                     await selectChain(targetChainId)
